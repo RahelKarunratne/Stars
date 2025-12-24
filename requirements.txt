@@ -1,0 +1,6 @@
+Flask>=2.0
+requests>=2.25
+beautifulsoup4>=4.9
+rapidfuzz>=2.0
+python-dotenv>=0.21
+# (You may already have these installed.)
