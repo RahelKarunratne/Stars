@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-start: #071126;
+  --bg-mid: #0b122b;
+  --bg-end: #050616;
+}
+
+html, body, #root { height: 100%; }
+
+/* Glass card and helpers */
+.card-bg {
+  @apply bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6;
+}
+
+.btn-glow {
+  box-shadow: 0 6px 20px rgba(99,102,241,0.12), 0 2px 8px rgba(99,102,241,0.06);
+}
+
+.alert {
+  @apply rounded-md px-4 py-3 text-sm;
+}
+
+/* spinner color override for large size */
+.spinner-lg { color: rgba(255,255,255,0.9); }
