@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyrics Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#071126] via-[#0b122b] to-[#050616] text-white flex items-center justify-center">
+  <main class="w-full max-w-4xl p-6">
+    <section class="mx-auto rounded-3xl p-8 md:p-12 bg-white/2 backdrop-blur-sm border border-white/6 shadow-soft">
+      <header class="text-center mb-6">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Lyrics Finder</h1>
+        <p class="mt-2 text-sm text-white/70">Paste a lyric fragment and we'll suggest matching songs — local & private.</p>
+      </header>
+
+      <form id="search-form" class="flex flex-col sm:flex-row gap-4 items-center">
+        <input id="phrase" name="phrase" type="text" placeholder="e.g. \"we don't need no education\"" required
+               class="w-full rounded-full px-6 py-4 text-lg bg-white/6 border border-white/6 placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent transition-shadow" />
+        <button type="submit" class="flex items-center gap-3 rounded-full px-6 py-3 bg-gradient-to-r from-[#1db954]/80 to-[#10b981]/70 text-black font-semibold transform transition hover:scale-[1.02] btn-glow">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z"/></svg>
+          <span class="hidden sm:inline">Search</span>
+        </button>
+      </form>
+
+      <div id="message" class="mt-4"></div>
+
+      <section id="results" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"></section>
+
+      <section id="detail" class="mt-6"></section>
+
+      <footer class="mt-6 text-center text-xs text-white/50">Local-only. Uses search result titles/snippets (no full lyrics pages).</footer>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
